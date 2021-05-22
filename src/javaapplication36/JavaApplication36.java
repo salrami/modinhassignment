@@ -5,31 +5,48 @@
  */
 package javaapplication36;
 
+import java.util.Scanner;
+
 public class JavaApplication36 {
-        void calculateArea(float x) {
-            System.out.println("Area of the square: "+x*x+" sq units");
+    public double x;
+    public double y;
+    public JavaApplication36() {
+
+    
+}
+
+    public static void main(String[] args) {
+         Rectangle rec = new Rectangle();
+         
+         Circle objPerimeter = new Circle(); 
+         
+         rec.calcAreaRect();
+         
+         
+       
+         
+    }
+
+    
+
+}
+
+class Rectangle extends JavaApplication36 {
+    public double calcAreaRect() {
+        double areaRec = x*x;
+        return areaRec;
+        
+    }
+
+}
+
+class Circle extends JavaApplication36 {
+        protected void calculateArea(float x) {
+            System.out.println("Area of the circle: "+x*x+" sq units");
     }
         
-        void calculateArea(float x, float y) {
-            System.out.println("Area of the rectangle: "+x*y+" sq units");
+        protected void calculatePerimeter(float x, float y) {
+            System.out.println("Area of the circle: "+x*y+" sq units");
     }
-    
-        void calculateArea(double r) {
-            double area = 3.14*r*r;
-            System.out.println("Area of the circle: "+area+" sq units");
-    }
-
-    
-    public static void main(String[] args) {
-         JavaApplication36 obj = new JavaApplication36();
-       
-	 obj.calculateArea(6.1f);
-	  
-	 obj.calculateArea(10,22);
-	   
-	 obj.calculateArea(6.1);
-    }
-
-    
-
+   
 }
